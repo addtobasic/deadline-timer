@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <p>hoge</p>
-    {{meigen[0].text}}
+  <div id="meigen">
+    <p>{{item[rand].text}}</p>
+    <p>{{item[rand].person}}</p>
   </div>
 </template>
 
@@ -9,9 +9,8 @@
   import Vue from 'vue'
   export default Vue.extend({
     name: 'Meigen',
-    data:
-    {
-      meigen:
+    data:()=>({
+      item:
       [
         {
           text:'この地上で過ごせる時間には限りがあります。本当に大事なことを本当に一生懸命できる機会は、二つか三つくらいしかないのです。',
@@ -71,7 +70,7 @@
         },
         {
           text:'ぐずぐずしている間に、人生は一気に過ぎ去っていく。',
-          poerson:'セネカ'
+          person:'セネカ'
         },
         {
           text:'学ぶのに、時間を費やしすぎるのは、怠惰である。',
@@ -133,14 +132,8 @@
           text:'一時間の浪費をなんとも思わない人は、人生の価値をまだ発見してはいない。',
           person:'ダーウィン'
         }
-      ]
-    },
-    methods:
-    {
-      'random':function(){
-        const rand = Math.floor(Math.random()*this.meigen.length);
-        return this.meigen[rand];
-      }
-    }
+      ],
+      rand:Math.floor(Math.random()*30),
+    })
   })
 </script>

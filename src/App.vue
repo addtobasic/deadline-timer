@@ -3,7 +3,9 @@
     <v-app>
 
       <Header></Header>
-      <Meigen></Meigen>
+        <v-main>
+          <Meigen></Meigen>
+        </v-main>
       <Footer></Footer>
     </v-app>
   </div>
@@ -16,7 +18,6 @@
   import Meigen from './components/Meigen.vue';
   export default Vue.extend({
     name: 'App',
-
     components: {
       Header,
       Footer,
