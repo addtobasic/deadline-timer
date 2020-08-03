@@ -1,7 +1,10 @@
 <template>
   <div id="meigen">
-    <p>{{item[rand].text}}</p>
-    <p>{{item[rand].person}}</p>
+    <v-container>
+      <h2>{{item[rand].text}}</h2>
+      <h4>{{item[rand].person}}</h4>
+      <v-btn @click="changeMeigen">change</v-btn>
+    </v-container>
   </div>
 </template>
 
@@ -9,8 +12,10 @@
   import Vue from 'vue'
   export default Vue.extend({
     name: 'Meigen',
-    data:()=>({
-      item:
+    data() {
+      return {
+        rand:Math.floor(Math.random()*30),
+        item:
       [
         {
           text:'この地上で過ごせる時間には限りがあります。本当に大事なことを本当に一生懸命できる機会は、二つか三つくらいしかないのです。',
@@ -41,7 +46,7 @@
           person:'本田宗一郎'
         },
         {
-          text:'朝7時に起き、夜11時に就寝すれば、たっぷり16時間ある。大抵の人は一日中なにか仕事をしている。ただ一つ違うのは、彼らの仕事は非常に多岐にわたり、私はたった一つの仕事に全てのエネルギーを集中る点だ。',
+          text:'朝7時に起き、夜11時に就寝すれば、たっぷり16時間ある。大抵の人は一日中なにか仕事をしている。ただ一つ違うのは、彼らの仕事は非常に多岐にわたり、私はたった一つの仕事に全てのエネルギーを集中する点だ。',
           person:'トーマス・エジソン'
         },
         {
@@ -133,7 +138,12 @@
           person:'ダーウィン'
         }
       ],
-      rand:Math.floor(Math.random()*30),
-    })
+      }
+    },
+    methods:{
+      changeMeigen:function(){
+        this.rand = Math.floor(Math.random()*30)
+      }
+    }
   })
 </script>

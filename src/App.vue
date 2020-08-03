@@ -4,7 +4,6 @@
       <Header></Header>
         <v-main>
           <Main></Main>
-          <Meigen></Meigen>
         </v-main>
       <Footer></Footer>
     </v-app>
