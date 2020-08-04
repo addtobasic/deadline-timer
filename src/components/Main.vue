@@ -63,12 +63,13 @@
         naiyou:"レポート提出",
         year:2020,
         month:8,
-        day:4,
+        day:5,
         hour:0,
         minutes:0,
         seconds:0,
         inTime:"",
         time:0,
+        time1:0,
         outDay:0,
         outHour:0,
         outMinutes:0,
@@ -89,15 +90,16 @@
           else if(this.time===0)
           {
             alert("無事期限までに間に合いましたかww")
-            this.time--
+            this.time=-100
           }
           else
           {
-            this.time--
-            this.outDay = Math.floor(moment(this.inTime).diff(moment())/1000)+1
-            this.outHour = Math.floor(this.time % (24 * 60 * 60) / (60 * 60))+1
-            this.outMinutes = Math.floor(this.time % (24 * 60 * 60) % (60 * 60) / 60)+1
-            this.outSeconds = this.time % (24 * 60 * 60) % (60 * 60) % 60+1
+            this.time1++
+            // this.outDay = Math.floor(moment(this.inTime).diff(moment())/1000)*(-1)
+            this.outDay = Math.floor(this.time / (24 * 60 * 60))+1
+            this.outHour = Math.floor(this.time1 % (24 * 60 * 60) / (60 * 60))*(-1)
+            this.outMinutes = Math.floor(this.time1 % (24 * 60 * 60) % (60 * 60) / 60)*(-1)
+            this.outSeconds = this.time1 % (24 * 60 * 60) % (60 * 60) % 60*(-1)
             console.log("足した結果this.outDay"+this.outDay)
             console.log("足した結果this.outHour"+this.outHour)
             console.log("足した結果outMinutes"+this.outMinutes)
@@ -105,7 +107,8 @@
           }
           //なぜか日付だけがおかしい
           // console.log("inTime"+this.inTime)
-          console.log("time"+this.time)
+          console.log("time="+this.time)
+          console.log("time1="+this.time1)
           console.log("outDay"+this.outDay)
           console.log("outHour"+this.outHour)
           console.log("outMinutes"+this.outMinutes)
