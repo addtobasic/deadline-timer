@@ -1,10 +1,20 @@
 <template>
-  <div id="meigen">
-    <v-container>
+  <div>
+    <div id="card_width">
+    <v-card-text>
       <h2>{{item[rand].text}}</h2>
-      <h4>{{item[rand].person}}</h4>
-      <v-btn @click="changeMeigen">change</v-btn>
-    </v-container>
+        </v-card-text>
+        <v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <h4>{{item[rand].person}}</h4>
+          </v-card-actions>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn @click="changeMeigen" color="primary">change</v-btn>
+          </v-card-actions>
+        </v-card-text>
+    </div>
   </div>
 </template>
 
@@ -141,9 +151,48 @@
       }
     },
     methods:{
-      changeMeigen:function(){
+      changeMeigen(){
         this.rand = Math.floor(Math.random()*30)
       }
     }
   })
 </script>
+<style>
+
+    @media screen and (min-width:0px) and ( max-width:480px){
+  #card_width
+  {
+    width: 320px;
+  }
+
+  }
+
+  @media screen and (min-width:480px) and (max-width:768px){
+  #card_width
+  {
+    width: 400px;
+
+  }
+  }
+
+  @media screen and (min-width:768px) and ( max-width:1024px){
+  #card_width
+  {
+    width: 480px;
+  }
+  }
+
+  @media screen and (min-width:1024px) and ( max-width:1400px){
+    #card_width
+    {
+    width: 560px;
+    }
+  }
+
+  @media screen and (min-width:1400px){
+    #card_width
+    {
+      width: 640px;
+    }
+  }
+</style>

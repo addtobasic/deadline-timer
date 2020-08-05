@@ -1,7 +1,7 @@
 <template>
       <v-app-bar
       app
-      color="#44bc84"
+      color="primary"
       dark
     >
       <v-toolbar-title>When is the deadline ?</v-toolbar-title>
@@ -13,6 +13,5 @@
   import Vue from 'vue'
   export default Vue.extend({
     name: 'Header',
-
   })
 </script>

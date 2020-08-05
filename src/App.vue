@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <v-app>
+    <v-app dark>
       <Header></Header>
-        <v-main>
-          <Main></Main>
-        </v-main>
+      <v-main>
+        <Main></Main>
+      </v-main>
       <Footer></Footer>
     </v-app>
   </div>
@@ -25,9 +25,5 @@
       Main,
       Meigen,
     },
-
-    data: () => ({
-      //
-    }),
   });
 </script>
