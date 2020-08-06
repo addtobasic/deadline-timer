@@ -64,10 +64,10 @@
     },
 
     data:()=>({
-      naiyou:"夏休み終了",
+      naiyou:"",
       year:2020,
-      month:8,
-      day:16,
+      month:1,
+      day:1,
       hour:0,
       minutes:0,
       seconds:0,
