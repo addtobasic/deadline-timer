@@ -83,7 +83,7 @@
     }),
     created: function () {
       setInterval(() => {
-        this.inTime = this.year+"-"+this.month+"-"+this.day+" "+this.hour+":"+this.minutes+":"+this.seconds
+        this.inTime = this.year+"/"+this.month+"/"+this.day+" "+this.hour+":"+this.minutes+":"+this.seconds
         var now = moment();
         var from = moment(this.inTime);
         this.time = Math.floor(from.diff(now)/1000)
