@@ -22,12 +22,12 @@ CHANGEボタンをクリックすると下に表示されている名言を変�
 
  
 ```bash
-npm install -g @vue/cli
-npm install vuetify
+$ npm install -g @vue/cli
+$ npm install vuetify
 ```
  
 # Usage
 
 ```bash
-npm run serve
+$ npm run serve
 ```
