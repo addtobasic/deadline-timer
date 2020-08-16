@@ -31,3 +31,6 @@ $ npm install vuetify
 ```bash
 $ npm run serve
 ```
+# Hosting
+
+This page is hosted by GitHub Pages.
