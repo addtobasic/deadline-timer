@@ -1,19 +1,19 @@
 <template>
   <div>
     <div id="card_width">
-    <v-card-text>
-      <h2>{{item[rand].text}}</h2>
-        </v-card-text>
-        <v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <h4>{{item[rand].person}}</h4>
-          </v-card-actions>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn @click="changeMeigen" color="primary">change</v-btn>
-          </v-card-actions>
-        </v-card-text>
+      <v-card-text>
+        <h2>{{item[rand].text}}</h2>
+      </v-card-text>
+      <v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <h4>{{item[rand].person}}</h4>
+        </v-card-actions>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn @click="changeMeigen" color="primary">change</v-btn>
+        </v-card-actions>
+      </v-card-text>
     </div>
   </div>
 </template>
