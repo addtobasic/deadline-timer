@@ -64,17 +64,19 @@
     },
 
     data:()=>({
+      //初期値
       naiyou:"",
-      year:2020,
+      year:2021,
       month:1,
       day:1,
       hour:0,
       minutes:0,
       seconds:0,
-      inTime:"",
+      inTimeText:"",
       timeFlag:true,
       time:0,
-      time1:0,
+
+      //出力の数値
       outDay:0,
       outHour:0,
       outMinutes:0,
@@ -83,27 +85,32 @@
     }),
     created: function () {
       setInterval(() => {
-        this.inTime = this.year+"/"+this.month+"/"+this.day+" "+this.hour+":"+this.minutes+":"+this.seconds
-        var now = moment();
-        var from = moment(this.inTime);
-        this.time = Math.floor(from.diff(now)/1000)
+        //入力された時間の文字列を作成
+        this.inTimeText = this.year+"/"+this.month+"/"+this.day+" "+this.hour+":"+this.minutes+":"+this.seconds
 
-        if(this.time===0 && this.timeFlag)
-        {
+        //入力された時間と今の時間の差を計算
+        var now = moment();
+        var inTime = moment(this.inTimeText);
+        this.time = Math.floor(inTime.diff(now)/1000)
+
+        //出力する形にそれぞれを変換
+        this.outDay = Math.floor(this.time / (24 * 60 * 60))
+        this.outHour = Math.floor(this.time % (24 * 60 * 60) / (60 * 60));
+        this.outMinutes = Math.floor(this.time % (24 * 60 * 60) % (60 * 60) / 60);
+        this.outSeconds = this.time % (24 * 60 * 60) % (60 * 60) % 60;
+
+        //時間切れになっていなかったら1秒ずつ減らす
+        if(this.time>0&&this.timeFlag)this.time--
+
+        //時間切れになったら煽
+        else if(this.time === 0 && this.timeFlag){
           alert("無事期限までに間に合いましたかww")
           location.reload()
           this.timeFlag = false
         }
 
-        if(this.time>0&&this.timeFlag)this.time--
-
-        this.inTime = this.year+"-"+this.month+"-"+this.day+" "+this.hour+":"+this.minutes+":"+this.seconds
-        this.outDay = Math.floor(this.time / (24 * 60 * 60))
-        this.outHour = Math.floor(this.time % (24 * 60 * 60) / (60 * 60));
-        this.outMinutes = Math.floor(this.time % (24 * 60 * 60) % (60 * 60) / 60);
-        this.outSeconds = this.time % (24 * 60 * 60) % (60 * 60) % 60;
-        if(this.time<0)
-        {
+        //終了したら数値のリセット
+        else if(this.time<0){
           this.outDay = 0
           this.outHour = 0
           this.outMinutes = 0
