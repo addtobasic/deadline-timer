@@ -4,7 +4,9 @@
       color="primary"
       dark
     >
-      <v-toolbar-title>When is the deadline ?</v-toolbar-title>
+      <a href="/" style="color:white;">
+        <v-toolbar-title>When is the deadline ?</v-toolbar-title>
+      </a>
       <v-spacer></v-spacer>
     </v-app-bar>
 </template>
@@ -15,3 +17,9 @@
     name: 'Header',
   })
 </script>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
