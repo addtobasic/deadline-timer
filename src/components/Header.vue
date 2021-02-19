@@ -4,7 +4,7 @@
       color="primary"
       dark
     >
-      <a href="/" style="color:white;">
+      <a href="https://genshi0916.github.io/when_is_the_deadline/" style="color:white;">
         <v-toolbar-title>When is the deadline ?</v-toolbar-title>
       </a>
       <v-spacer></v-spacer>
