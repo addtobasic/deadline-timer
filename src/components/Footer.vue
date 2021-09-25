@@ -7,7 +7,7 @@
     >
       <div>つくったひと <a href="https://twitter.com/genshi0916" target="_blank" style="color:white;">げんし</a></div>
       <div class="flex-grow-1"></div>
-      <div><v-icon>mdi-gmail</v-icon>genshi0916@gmail.com</div>
+      <div><v-icon>mdi-gmail</v-icon>addtobasic@gmail.com</div>
     </v-footer>
 </template>
 

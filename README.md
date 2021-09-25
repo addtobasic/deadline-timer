@@ -1,16 +1,16 @@
-# when_is_the_deadline
- 
-よくTwitterなどで見かけるタイマーを作りました
+# deadline-timer
 
-url : [https://genshi0916.github.io/when_is_the_deadline/#/](https://genshi0916.github.io/when_is_the_deadline/#/)
- 
+よくTwitterなどで見かける名言が表示されるタイマーを作りました. 卒論提出や定期試験などでお使いください
+
+url : [https://addtobasic.github.io/deadline-timer/](https://addtobasic.github.io/deadline-timer/)
+
 # Setup
- 
+
 ```bash
-$ git clone https://github.com/Genshi0916/when_is_the_deadline.git
-$ cd when_is_the_deadline
+$ git clone https://github.com/addtobasic/deadline-timer.git
+$ cd deadline-timer
 $ npm install
-``` 
+```
 # Start
 
 ```bash
@@ -18,13 +18,13 @@ $ npm run dev
 ```
 
 # DEMO
- 
+
 締切の内容と締め切りの日時を上のフォームに入力するだけで使うことができます
- 
+
 CHANGEボタンをクリックすると下に表示されている名言を変更することができます
 
 ![](demo.png "demo")
- 
+
 # Hosting
 
 This page is hosted by GitHub Pages.

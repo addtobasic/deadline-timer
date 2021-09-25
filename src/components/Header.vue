@@ -5,7 +5,7 @@
       dark
     >
       <a href="https://genshi0916.github.io/when_is_the_deadline/" style="color:white;">
-        <v-toolbar-title>When is the deadline ?</v-toolbar-title>
+        <v-toolbar-title>deadline timer</v-toolbar-title>
       </a>
       <v-spacer></v-spacer>
     </v-app-bar>
