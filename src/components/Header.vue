@@ -4,7 +4,7 @@
       color="primary"
       dark
     >
-      <a href="https://genshi0916.github.io/when_is_the_deadline/" style="color:white;">
+      <a href="https://addtobasic.github.io/deadline-timer/" style="color:white;">
         <v-toolbar-title>deadline timer</v-toolbar-title>
       </a>
       <v-spacer></v-spacer>
