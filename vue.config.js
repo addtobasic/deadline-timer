@@ -1,7 +1,6 @@
 module.exports = {
-  publicPath:'./',
-  outputDir: 'docs/',
-  "transpileDependencies": [
-    "vuetify"
-  ]
-}
+  publicPath: "/deadline-timer",
+  assetsDir: "static",
+  outputDir: "./docs",
+  transpileDependencies: ["vuetify"],
+};
