@@ -14,7 +14,7 @@ $ npm install
 # Start
 
 ```bash
-$ npm run dev
+$ npm run serve
 ```
 
 # DEMO
